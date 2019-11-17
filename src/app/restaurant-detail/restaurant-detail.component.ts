@@ -12,7 +12,8 @@ export class RestaurantDetailComponent implements OnInit {
 
   restaurant: Restaurant
 
-  constructor(private restaurantsService: RestaurantsService, private route : ActivatedRoute) { }
+  constructor(private restaurantsService: RestaurantsService, 
+              private route : ActivatedRoute) { }
 
   ngOnInit() {
     this.restaurantsService.restaurantById(this.route.snapshot.params['id'])
